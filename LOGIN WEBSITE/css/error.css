@@ -1,0 +1,52 @@
+
+.error-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  transition: transform 0.3s ease-in;
+}
+
+.error-label.active {
+  display: flex;
+  align-items: center;
+}
+
+.error-label i {
+  margin-right: 5px;
+}
+
+.error-label small {
+  visibility: hidden;
+  padding: 0.25em 0.5em;
+  font-size: 1.3rem;
+  background-color: white;
+  color: red;
+  text-align: center;
+  border-radius: 0.30em;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 100%;
+  transition-property: visibility;
+  transition-delay: 0s;
+}
+
+.error-label:hover small {
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+@media (max-width: 950px) {
+  .error-label small {
+    font-size: 1.1rem;
+  }
+
+}
